@@ -6,7 +6,7 @@ import pandas as pd
 
 # MODEL LOADING
 df = pd.read_csv(
-    r"C:\Users\batuhan\Desktop\KODLUYORUZ\Istanbul-Data-Science-Bootcamp\week4\house_price_1.csv")
+    r"week4\house_price_1.csv")
 
 dropColumns = ["Id", "MSSubClass", "MSZoning", "Street", "LandContour", "Utilities", "LandSlope", "Condition1", "Condition2", "BldgType", "OverallCond", "RoofStyle",
                "RoofMatl", "Exterior1st", "Exterior2nd", "MasVnrType", "ExterCond", "Foundation", "BsmtCond", "BsmtExposure", "BsmtFinType1",
@@ -39,7 +39,7 @@ for feature in obj_feat:
     inputDf[feature] = inputDf[feature].astype('category')
 
 # load the model weights and predict the target
-modelName = r"C:\Users\batuhan\Desktop\KODLUYORUZ\Istanbul-Data-Science-Bootcamp\week4\finalized_model.model"
+modelName = r"week4\finalized_model.model"
 loaded_model = pickle.load(open(modelName, 'rb'))
 
 # STREAMLIT FRONTEND DEVELOPMENT
